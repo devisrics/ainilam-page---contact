@@ -195,42 +195,36 @@
     </section>
 
     <section class="section-padding mv-template-v4">
-        <div class="container">
-            
-            <h2 class="mv-main-title text-center mb-5 typo-secondary-color" style="color: #111082;">MISSION & VALUES</h2>
+    <div class="container mv-full-screen-wrapper">
+        
+        <h2 class="mv-main-title text-center">MISSION & VALUES</h2>
 
-            <div class="mv-infographic-wrapper mt-5">
-                <!-- Gradient Bar Background -->
-                <div class="mv-gradient-bar-container d-none d-md-block">
-                    <div class="mv-gradient-bar"></div>
+        <div class="mv-grid-container">
+            <div class="row mv-row">
+                <div class="col-md-6 mv-box-image">
+                    <img src="./assets/img/about/mission-value/mission.jpg" alt="Our Mission">
                 </div>
-                
-                <div class="row text-center position-relative z-1 justify-content-center">
-                    <!-- Mission -->
-                    <div class="col-md-4 mb-5 mb-md-0">
-                        <div class="mv-item">
-                            <div class="mv-circle">
-                                <i class="fa-solid fa-bullseye mv-icon" style="color: #111082;"></i>
-                            </div>
-                            <h3 class="mv-item-title">OUR MISSION</h3>
-                            <p class="mv-item-text">Deliver predictable project outcomes using international standards, maximizing value through disciplined execution.</p>
-                        </div>
-                    </div>
-                    <!-- Values -->
-                    <div class="col-md-6">
-                        <div class="mv-item">
-                            <div class="mv-circle">
-                                <i class="fa-regular fa-gem mv-icon" style="color: #111082;"></i>
-                            </div>
-                            <h3 class="mv-item-title">OUR VALUES</h3>
-                            <p class="mv-item-text">Independence, accountability, transparency, discipline, and excellence guide every Ainilam project - ensuring client-first execution with zero conflicts and complete ownership.</p>
-                        </div>
-                    </div>
+                <div class="col-md-6 mv-box-content">
+                    <i class="fa-solid fa-bullseye mv-icon-small"></i>
+                    <h3 class="mv-item-title">OUR MISSION</h3>
+                    <p class="mv-item-text">Deliver predictable project outcomes using international standards, maximizing value through disciplined execution.</p>
                 </div>
             </div>
 
+            <div class="row mv-row flex-md-row-reverse">
+                <div class="col-md-6 mv-box-image">
+                    <img src="./assets/img/about/mission-value/value.jpg" alt="Our Values">
+                </div>
+                <div class="col-md-6 mv-box-content">
+                    <i class="fa-regular fa-gem mv-icon-small"></i>
+                    <h3 class="mv-item-title">OUR VALUES</h3>
+                    <p class="mv-item-text">Independence, accountability, transparency, discipline, and excellence guide every Ainilam project - ensuring client-first execution with zero conflicts and complete ownership.</p>
+                </div>
+            </div>
         </div>
-    </section>
+
+    </div>
+</section>
 
     <section class="section-padding wave-trust-section">
         <div class="container text-center">
@@ -240,12 +234,20 @@
             <div class="wave-container position-relative mt-5">
                 <!-- Wavy Line SVG -->
                 <svg class="wave-line-svg d-none d-lg-block" viewBox="0 0 1000 200" preserveAspectRatio="none">
-                    <path d="M 125 45 C 250 45, 250 160, 375 160 C 500 160, 500 45, 625 45 C 750 45, 750 160, 875 160" fill="transparent" stroke="#b0c4de" stroke-width="2" stroke-dasharray="6,6"/>
+                    <path d="M 120 45
+                            C 210 45, 250 160, 340 160
+                            C 430 160, 470 45, 560 45
+                            C 650 45, 690 160, 780 160
+                            C 850 160, 900 45, 875 45"
+                        fill="transparent"
+                        stroke="#b0c4de"
+                        stroke-width="2"
+                        stroke-dasharray="6,6"/>
                 </svg>
 
-                <div class="row position-relative z-1">
+                <div class="wave-row">
                     <!-- Item 1 -->
-                    <div class="col-lg-3 col-md-6 mb-4 wave-up">
+                    <div class="wave-col wave-up">
                         <div class="wave-item">
                             <div class="wave-icon-box">
                                 <i class="fa-solid fa-scale-balanced"></i>
@@ -255,7 +257,7 @@
                         </div>
                     </div>
                     <!-- Item 2 -->
-                    <div class="col-lg-3 col-md-6 mb-4 wave-down">
+                    <div class="wave-col wave-down">
                         <div class="wave-item active-card">
                             <div class="wave-icon-box">
                                 <i class="fa-solid fa-briefcase"></i>
@@ -265,7 +267,7 @@
                         </div>
                     </div>
                     <!-- Item 3 -->
-                    <div class="col-lg-3 col-md-6 mb-4 wave-up">
+                    <div class="wave-col wave-up">
                         <div class="wave-item">
                             <div class="wave-icon-box">
                                 <i class="fa-solid fa-chart-pie"></i>
@@ -275,7 +277,17 @@
                         </div>
                     </div>
                     <!-- Item 4 -->
-                    <div class="col-lg-3 col-md-6 mb-4 wave-down">
+                     <div class="wave-col wave-down">
+                        <div class="wave-item active-card">
+                            <div class="wave-icon-box">
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </div>
+                            <h4 class="wave-title">Global Standards</h4>
+                            <p class="wave-text">Asia-Pacific frameworks for Indian realities</p>
+                        </div>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="wave-col wave-up">
                         <div class="wave-item">
                             <div class="wave-icon-box">
                                 <i class="fa-solid fa-shield"></i>

@@ -164,8 +164,6 @@
   border-radius: 20px;
 }
 
-
-
 .typo-text-m strong {
   color: #0e121d;
   font-weight: 700;
@@ -306,8 +304,6 @@ ul.typo-text-m li::before {
   padding: 110px 0;
 }
 
-/* NOTE: Grid mesh/blackline structure pseudo selector code stripped down cleanly from here */
-
 .positioning-section .container {
   position: relative;
   z-index: 2;
@@ -426,8 +422,22 @@ ul.typo-text-m li::before {
 /* ==========================================================================
    MISSION, VISION & VALUES - TEMPLATE V4 (INFOGRAPHIC STYLE)
    ========================================================================== */
+/* Container Styles */
 .mv-template-v4 {
     background-color: #ffffff;
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+}
+
+/* Master container wrapper to handle screen fitment */
+.mv-full-screen-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    max-width: 1200px;
 }
 
 .mv-main-title {
@@ -435,71 +445,167 @@ ul.typo-text-m li::before {
     font-size: 32px;
     font-weight: 700;
     letter-spacing: 1.5px;
-    margin: 0;
+    margin-bottom: 40px;
+    flex: 0 0 auto;
 }
 
-.mv-infographic-wrapper {
-    position: relative;
-    padding-top: 30px;
-    padding-bottom: 20px;
-}
-
-.mv-gradient-bar-container {
-    position: absolute;
-    top: 65px;
-    left: 25%;
-    width: 41.666%;
-    height: 70px;
-    z-index: 0;
-}
-
-.mv-gradient-bar {
-    position: absolute;
-    top: 0;
-    left: -20px;
-    right: -20px;
-    height: 100%;
-    background: #111082;
-    border-radius: 35px;
-}
-
-.mv-item {
-    position: relative;
-    z-index: 1;
-}
-
-.mv-circle {
-    width: 140px;
-    height: 140px;
-    background-color: #ffffff;
-    border-radius: 50%;
+/* Unified Grid Box */
+.mv-grid-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 30px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0,0,0,0.03);
+    flex-direction: column;
+    gap: 30px; /* Increased gap to give cards clean room to float upwards */
+    flex: 1 1 auto;
 }
 
-.mv-icon {
-    font-size: 55px;
+/* Row Layout Management */
+.mv-row {
+    display: flex;
+    align-items: stretch; /* Forces image and text to match identically */
+    margin: 0 !important;
+    gap: 30px;
+    flex: 1;
+}
+
+/* Overriding Bootstrap default column structures */
+.mv-row > .col-md-6 {
+    flex: 1;
+    max-width: 100%;
+    padding: 0 !important;
+}
+/* ==========================================================================
+
+/* 1. Modify the Box Blueprint to be stable */
+.mv-box-content, .mv-box-image {
+    position: relative;
+    border-radius: 25px; 
+    height: 300px;
+    transition: box-shadow 0.4s ease, background-color 0.4s ease; 
+}
+
+/* Internal contents get the smooth transform instead */
+.mv-box-content, .mv-box-image img {
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* 2. Target the parent Bootstrap column as the steady anchor hover target */
+.mv-row > .col-md-6 {
+    flex: 1;
+    max-width: 100%;
+    padding: 0 !important;
+    cursor: pointer;
+}
+
+/* When the parent column is hovered, smoothly move the child element UP */
+.mv-row > .col-md-6:hover .mv-box-content {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(17, 16, 130, 0.12);
+}
+
+.mv-row > .col-md-6:hover .mv-box-image img {
+    transform: translateY(-10px) scale(1.03); /* Keeps both the lift and image zoom sync'd */
+}
+
+.mv-row > .col-md-6:hover .mv-box-image {
+    box-shadow: 0 20px 40px rgba(17, 16, 130, 0.12);
+}
+
+/* 3. Bottom Accent Strip Fix */
+.mv-box-content::after, .mv-box-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: #111082;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    z-index: 2;
+}
+
+/* Make the bottom bar display relative to our new stable parent hover rule */
+.mv-row > .col-md-6:hover .mv-box-content::after,
+.mv-row > .col-md-6:hover .mv-box-image::after {
+    opacity: 1;
+}
+/* ==========================================================================
+   IMAGE BOX SPECIFICS
+   ========================================================================== */
+.mv-box-image {
+    display: flex;
+    overflow: hidden; /* Clips the internal image to the card's border-radius */
+}
+
+.mv-box-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    transition: transform 0.5s ease;
+}
+
+/* Elegant slow zoom inside the frame on hover */
+.mv-box-image:hover img {
+    transform: scale(1.03);
+}
+
+/* ==========================================================================
+   CONTENT BOX SPECIFICS (NO BG COLOR FLIP ON HOVER)
+   ========================================================================== */
+.mv-box-content {
+    background: #fdfdff; 
+    padding: 40px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgba(17, 16, 130, 0.05);
+}
+
+.mv-icon-small {
+    font-size: 38px;
+    margin-bottom: 15px;
+    color: #111082;
+    padding-left:10px
 }
 
 .mv-item-title {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
-    color: #4C4F58;
-    margin-bottom: 15px;
+    color: #111082;
+    margin-bottom: 12px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    padding-left:10px
 }
 
 .mv-item-text {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.8;
-    color: #7B7D84;
-    max-width: 260px;
-    margin: 0 auto;
+    color: #4C4F58;
+    margin: 0;
+    padding-left:10px
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 768px) {
+    .mv-row {
+        flex-direction: column !important;
+        gap: 20px;
+    }
+    .mv-box-image, .mv-box-content {
+        height: auto; 
+        min-height: 240px;
+    }
+    .mv-box-image {
+        order: -1; /* Keeps images placed logically above descriptions on mobile screens */
+    }
+    /* Disable translate lifts on mobile to prevent layout shifting on tap touch */
+    .mv-box-content:hover, .mv-box-image:hover {
+        transform: none;
+    }
 }
 /* ==========================================================================
    WAVE TRUST SECTION (Image Reference Style)
@@ -524,10 +630,25 @@ ul.typo-text-m li::before {
     z-index: 0;
 }
 
+.wave-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.wave-col {
+    width: 220px;
+    flex-shrink: 0;
+}
+
 .wave-item {
     padding: 20px 15px;
     text-align: center;
     transition: all 0.3s ease;
+    min-height: 260px;
 }
 
 .wave-icon-box {
@@ -572,16 +693,28 @@ ul.typo-text-m li::before {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 }
 
-/* Wavy positioning */
 @media (min-width: 992px) {
+
     .wave-up {
-        margin-top: -10px;
+        margin-top: 0;
     }
+
     .wave-down {
-        margin-top: 90px;
+        margin-top: 70px;
     }
 }
+
 @media (max-width: 991.98px) {
+
+    .wave-row {
+        flex-wrap: wrap;
+    }
+
+    .wave-up,
+    .wave-down {
+        margin-top: 0;
+    }
+
     .wave-item {
         margin-bottom: 30px;
     }
