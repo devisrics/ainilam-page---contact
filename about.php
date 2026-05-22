@@ -232,65 +232,61 @@
         </div>
     </section>
 
-    <section class="section-padding trust-positioning-section">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                
-                <div class="col-12 col-lg-6">
-                    <div class="trust-image-wrapper">
-                        <img src="./assets/img/about/trust/trustus.png" alt="Ainilam Engineering Project Quality Management">
+    <section class="section-padding wave-trust-section">
+        <div class="container text-center">
+            
+            <h2 class="trust-main-title mb-5 text-uppercase">Why Owners Trust Ainilam</h2>
+
+            <div class="wave-container position-relative mt-5">
+                <!-- Wavy Line SVG -->
+                <svg class="wave-line-svg d-none d-lg-block" viewBox="0 0 1000 200" preserveAspectRatio="none">
+                    <path d="M 125 45 C 250 45, 250 160, 375 160 C 500 160, 500 45, 625 45 C 750 45, 750 160, 875 160" fill="transparent" stroke="#b0c4de" stroke-width="2" stroke-dasharray="6,6"/>
+                </svg>
+
+                <div class="row position-relative z-1">
+                    <!-- Item 1 -->
+                    <div class="col-lg-3 col-md-6 mb-4 wave-up">
+                        <div class="wave-item">
+                            <div class="wave-icon-box">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </div>
+                            <h4 class="wave-title">Absolute Independence</h4>
+                            <p class="wave-text">No contractor/vendor relationships.</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="col-lg-3 col-md-6 mb-4 wave-down">
+                        <div class="wave-item active-card">
+                            <div class="wave-icon-box">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+                            <h4 class="wave-title">End-to-End Ownership</h4>
+                            <p class="wave-text">One team, total responsibility.</p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="col-lg-3 col-md-6 mb-4 wave-up">
+                        <div class="wave-item">
+                            <div class="wave-icon-box">
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </div>
+                            <h4 class="wave-title">Data-Driven Oversight</h4>
+                            <p class="wave-text">Real-time dashboards beat self-reporting.</p>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="col-lg-3 col-md-6 mb-4 wave-down">
+                        <div class="wave-item">
+                            <div class="wave-icon-box">
+                                <i class="fa-solid fa-shield"></i>
+                            </div>
+                            <h4 class="wave-title">Risk Elimination</h4>
+                            <p class="wave-text">Global standards applied to eliminate risks before they become yours.</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-12 col-lg-6">
-                    <div class="trust-content-box">
-                        <h2 class="trust-main-title">Why Owners Trust <span class="accent-red">Ainilam</span></h2>
-                        <div class="title-underline-bar"></div>
-                        
-                        <p class="trust-lead-text">
-                            5 Non-Negotiable Commitments:
-                        </p>
-
-                        <ul class="trust-points-list">
-                            <li>
-                                <span class="trust-icon-prefix"><i class="fa-solid fa-scale-balanced"></i></span>
-                                <p class="typo-text-m">
-                                    <strong>Absolute Independence</strong> - No contractor/vendor relationships
-                                </p>
-                            </li>
-                            <li>
-                                <span class="trust-icon-prefix"><i class="fa-solid fa-briefcase"></i></span>
-                                <p class="typo-text-m">
-                                    <strong>End-to-End Ownership</strong> - One team, total responsibility
-                                </p>
-                            </li>
-                            <li>
-                                <span class="trust-icon-prefix"><i class="fa-solid fa-chart-pie"></i></span>
-                                <p class="typo-text-m">
-                                    <strong>Data-Driven Oversight</strong> - Real-time dashboards beat contractor self-reporting
-                                </p>
-                            </li>
-                            <li>
-                                <span class="trust-icon-prefix"><i class="fa-solid fa-globe"></i></span>
-                                <p class="typo-text-m">
-                                    <strong>Global Standards</strong> - Asia-Pacific frameworks for Indian realities
-                                </p>
-                            </li>
-                            <li>
-                                <span class="trust-icon-prefix"><i class="fa-solid fa-shield"></i></span>
-                                <p class="typo-text-m">
-                                    <strong>Risk Elimination</strong> - We own problems before they become yours
-                                </p>
-                            </li>
-                        </ul>
-
-                        <p class="trust-footer-summary mt-4">
-                            Predictable delivery. No firefighting. Protected investment.
-                        </p>
-                    </div>
-                </div>
-
             </div>
+            <p class="wave-text"> Predictable delivery. No firefighting. Protected investment.</p>
         </div>
     </section>
 

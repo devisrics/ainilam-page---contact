@@ -502,91 +502,89 @@ ul.typo-text-m li::before {
     margin: 0 auto;
 }
 /* ==========================================================================
-   WHY OWNERS TRUST AINILAM STYLING
+   WAVE TRUST SECTION (Image Reference Style)
    ========================================================================== */
-.trust-positioning-section {
-  background-color: #ffffff;
-  padding: 80px 0;
+.wave-trust-section {
+    background-color: #f4f9fd;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    overflow: hidden;
 }
 
-.trust-image-wrapper {
-  width: 100%;
-  position: relative;
+.wave-container {
+    padding: 20px 0;
 }
 
-.trust-image-wrapper img {
-  width: 100%;
-  height: 480px;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+.wave-line-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    z-index: 0;
 }
 
-.trust-content-box {
-  padding-left: 10px;
+.wave-item {
+    padding: 20px 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.wave-icon-box {
+    width: 70px;
+    height: 70px;
+    background-color: #111082;
+    color: #ffffff;
+    border-radius: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(17, 16, 130, 0.2);
 }
 
 .trust-main-title {
-  font-size: 32px;
-  font-weight: 700;
-  color: #0e121d;
-  margin-bottom: 12px;
-  letter-spacing: -0.5px;
-}
-
-.title-underline-bar {
-  width: 60px;
-  height: 4px;
-  background-color: #111082;
-  margin-bottom: 25px;
-  border-radius: 2px;
-}
-
-.trust-lead-text {
-  font-size: 16px;
-  font-weight: 700;
-  color: #4C4F58;
-  margin-bottom: 25px;
-}
-
-.trust-points-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.trust-points-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-}
-
-.blue-arrow-prefix {
-  color: #111082;
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 1.5;
-  user-select: none;
-}
-
-.trust-points-list p {
-  margin: 0;
-  color: #4C4F58;
-  line-height: 1.6;
-}
-
-/* Custom Font Awesome Icon Prefix Alignment */
-.trust-icon-prefix {
+    font-size: 36px;
+    font-weight: 800;
     color: #111082;
+    margin-bottom: 12px;
+}
+
+.wave-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #0e121d;
+    margin-bottom: 12px;
+}
+
+.wave-text {
     font-size: 16px;
-    line-height: 1.5;
-    margin-top: 3px;
-    flex-shrink: 0;
-    width: 24px;
-    text-align: center;
+    color: #4C4F58;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.active-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 35px 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* Wavy positioning */
+@media (min-width: 992px) {
+    .wave-up {
+        margin-top: -10px;
+    }
+    .wave-down {
+        margin-top: 90px;
+    }
+}
+@media (max-width: 991.98px) {
+    .wave-item {
+        margin-bottom: 30px;
+    }
 }
 
 /* ==========================================================================
@@ -637,16 +635,7 @@ ul.typo-text-m li::before {
   .method-title {
     font-size: 18px;
   }
-  /* Trust positioning element metrics */
-  .trust-image-wrapper img {
-    height: 350px;
-  }
-  .trust-main-title {
-    font-size: 28px;
-  }
 }
-
-
 
 /* Mobile Devices (max-width: 767px) */
 @media (max-width: 767.98px) {
