@@ -1,0 +1,689 @@
+.breadcrumb-area.premium-hero {
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+  padding: 110px 0; 
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #0e121d;
+}
+
+/* Base Layer: Beautiful full-bleed image container */
+.hero-image-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/about/banner/banner-about.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+/* Overlay Layer: Protects copy readability over raw imagery */
+.hero-dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+/* ==========================================================================
+   CONTENT INNER CONTAINERS
+   ========================================================================== */
+.about-banner-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 128px;
+}
+
+.about-banner-content {
+  max-width: 720px;
+  position: relative;
+  z-index: 10;
+  padding-left: 15px;
+}
+
+/* Pure, bright contrast typography rules */
+.about-banner-content h1 {
+  font-family: 'Outfit', 'Segoe UI', sans-serif;
+  font-size: 45px;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #ffffff !important;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.about-banner-content p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9) !important;
+  margin-bottom: 30px;
+  font-weight: 400;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   BREADCRUMBS STYLING
+   ========================================================================== */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.breadcrumb-item, .breadcrumb-item.active {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.breadcrumb-item a {
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 700;
+  transition: opacity 0.2s ease;
+}
+
+.breadcrumb-item a:hover {
+  opacity: 0.8;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "" !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: none !important; 
+}
+
+/* ==========================================================================
+   KINETIC REVEAL ENTRANCE ANIMATIONS
+   ========================================================================== */
+.reveal-item-trigger-1,
+.reveal-item-trigger-2,
+.reveal-item-trigger-3 {
+  opacity: 0;
+  transform: translateY(30px);
+  will-change: transform, opacity;
+  animation: elegantSlideUpWithFade 0.85s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.reveal-item-trigger-1 { animation-delay: 0.1s; }
+.reveal-item-trigger-2 { animation-delay: 0.25s; }
+.reveal-item-trigger-3 { animation-delay: 0.4s; }
+
+@keyframes elegantSlideUpWithFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   MAIN CORE CONTENT PAGES GLOBAL SECTIONS
+   ========================================================================== */
+.section-padding {
+  padding: 110px 0;
+}
+
+.section-top {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sub-title {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111082;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.sub-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #111082;
+  margin: 16px auto 0;
+  border-radius: 20px;
+}
+
+.typo-text-m {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #4C4F58;
+  margin-bottom: 20px;
+}
+
+.typo-text-m strong {
+  color: #0e121d;
+  font-weight: 700;
+}
+
+/* Delivery Grid Reason Cards */
+.reason-box {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 35px 30px;
+  height: 100%;
+  border: 1px solid rgba(17, 16, 130, 0.08);
+  box-shadow: 0 10px 35px rgba(17, 16, 130, 0.06);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.reason-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #111082;
+}
+
+.reason-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(17, 16, 130, 0.12);
+}
+
+.reason-number {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(17, 16, 130, 0.08);
+  color: #111082;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.reason-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0e121d;
+  margin-bottom: 15px;
+}
+
+.reason-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #4C4F58;
+  margin-bottom: 0;
+}
+
+/* Checkmarks Setup Layout */
+ul.typo-text-m {
+  padding-left: 0;
+}
+
+ul.typo-text-m li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  line-height: 1.8;
+  list-style: none;
+}
+
+ul.typo-text-m li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Pro", "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #111082;
+  font-size: 14px;
+}
+
+.typo-primary-color {
+  color: #111082;
+  font-weight: 700;
+}
+
+.bg-light {
+  background: #f8f9fc !important;
+}
+
+/* CTA Buttons styling scripts */
+.custom-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 34px;
+  border-radius: 50px;
+  background: #111082;
+  color: #ffffff !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  border: 2px solid #111082;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+  background: transparent;
+  color: #111082 !important;
+  transform: translateY(-2px);
+}
+
+.custom-btn.border-1 {
+  background: transparent;
+  color: #ffffff !important;
+  border-color: #ffffff;
+}
+
+.custom-btn.border-1:hover {
+  background: #ffffff;
+  color: #111082 !important;
+}
+
+.bg-text-primary-color {
+  background-color: #111082 !important;
+}
+
+/* ==========================================================================
+   OUR UNIQUE POSITIONING
+   ========================================================================== */
+.positioning-section {
+  background-color: #f8f9fc;
+  position: relative;
+  overflow: hidden;
+  padding: 110px 0;
+}
+
+/* NOTE: Grid mesh/blackline structure pseudo selector code stripped down cleanly from here */
+
+.positioning-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.positioning-content .sub-title {
+  text-align: left !important;
+  margin-bottom: 15px;
+}
+
+.positioning-content .sub-title::after {
+  margin: 16px 0 0 0 !important;
+}
+
+.positioning-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.positioning-img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;  
+  border-radius: 24px;
+  border: none;
+  transform: translateY(-4px);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.positioning-image-wrapper:hover .positioning-img {
+  transform: translateY(-10px);
+}
+
+/* ==========================================================================
+   METHODOLOGY CARDS STYLING (MODERN CORPORATE STYLE)
+   ========================================================================== */
+.methodology-section {
+  background-color: #f4f7fa !important;
+}
+
+.method-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px 20px;
+  text-align: center;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(17, 16, 130, 0.05);
+  border: 1px solid rgba(17, 16, 130, 0.08);
+  transition: all 0.5s ease;
+}
+
+.method-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(17, 16, 130, 0.12);
+}
+
+.method-icon-wrap {
+  width: 70px;
+  height: 70px;
+  background-color: #111082;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 26px;
+  box-shadow: 0 5px 15px rgba(17, 16, 130, 0.2);
+}
+
+.method-number {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #111082;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  opacity: 0.7;
+}
+
+.method-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0e121d;
+  margin-bottom: 15px;
+}
+
+.method-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4C4F58;
+  margin-bottom: 0;
+}
+
+.method-footer-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: #111082;
+}
+
+/* ==========================================================================
+   MISSION & VALUES - TEMPLATE V3 (UPDATED CLEAN STYLE)
+   ========================================================================== */
+.mv-template-v3 {
+  background-color: #fcfcfc;
+}
+
+.mv-main-title {
+  color: black;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+
+.mv-main-title .accent-black {
+  color: black;
+}
+
+.mv-content-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.mv-text-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  flex: 1;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-subtitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111082;
+  margin-bottom: 15px;
+}
+
+.blue-arrow-link {
+  color: #111082;
+  font-weight: 900;
+  margin-top: 15px;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.mv-image-box {
+  flex: 1.2;
+  padding: 0 10px;
+}
+
+.mv-image-box img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* ==========================================================================
+   WHY OWNERS TRUST AINILAM STYLING
+   ========================================================================== */
+.trust-positioning-section {
+  background-color: #ffffff;
+  padding: 80px 0;
+}
+
+.trust-image-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.trust-image-wrapper img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.trust-content-box {
+  padding-left: 10px;
+}
+
+.trust-main-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0e121d;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.title-underline-bar {
+  width: 60px;
+  height: 4px;
+  background-color: #111082;
+  margin-bottom: 25px;
+  border-radius: 2px;
+}
+
+.trust-lead-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: #4C4F58;
+  margin-bottom: 25px;
+}
+
+.trust-points-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.trust-points-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.blue-arrow-prefix {
+  color: #111082;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.5;
+  user-select: none;
+}
+
+.trust-points-list p {
+  margin: 0;
+  color: #4C4F58;
+  line-height: 1.6;
+}
+
+/* Custom Font Awesome Icon Prefix Alignment */
+.trust-icon-prefix {
+    color: #111082;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 3px;
+    flex-shrink: 0;
+    width: 24px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   COMBINED MEDIA RESPONSIVE BREAKPOINTS (CLEAN AND MERGED)
+   ========================================================================== */
+
+/* Tablet & Smaller Desktop Viewports (max-width: 991px) */
+@media (max-width: 991px) {
+  .breadcrumb-area.premium-hero {
+    padding: 140px 0;
+    text-align: center;
+  }
+  .about-banner-wrapper {
+    justify-content: center;
+  }
+  .about-banner-content {
+    max-width: 100%;
+    padding-left: 0;
+  }
+  .about-banner-content h1 {
+    font-size: 36px;
+  }
+  .breadcrumb {
+    justify-content: center;
+  }
+  
+  /* Unique Positioning Section adjustments */
+  .positioning-content .sub-title {
+    text-align: center !important;
+  }
+  .positioning-content .sub-title::after {
+    margin: 16px auto 0 !important;
+  }
+  .positioning-img {
+    max-width: 90%;
+    margin-top: 40px;
+    aspect-ratio: 16 / 10;
+    transform: translateY(0);
+  }
+  .positioning-image-wrapper:hover .positioning-img {
+    transform: translateY(-4px);
+  }
+
+  /* Methodology section modifications */
+  .method-card {
+    padding: 25px 15px;
+  }
+  .method-title {
+    font-size: 18px;
+  }
+
+  /* Mission and value component shifts */
+  .mv-content-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+  .mv-image-box {
+    order: -1;
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 30px;
+  }
+  .mv-text-card {
+    width: 100%;
+    min-height: auto;
+  }
+
+  /* Trust positioning element metrics */
+  .trust-image-wrapper img {
+    height: 350px;
+  }
+  .trust-main-title {
+    font-size: 28px;
+  }
+}
+
+/* Mobile Devices (max-width: 767px) */
+@media (max-width: 767.98px) {
+  .about-banner-content h1 { 
+    font-size: 30px; 
+  }
+  .section-padding { 
+    padding: 70px 0; 
+  }
+  .sub-title { 
+    font-size: 28px; 
+  }
+  .trust-content-box {
+    padding-left: 0;
+  }
+  .trust-image-wrapper img {
+    height: 280px;
+  }
+}
+
+/* Extra Small Mobile Devices (max-width: 575px) */
+@media (max-width: 575px) {
+  .methodology-section .col-6 {
+    width: 100%;
+  }
+}

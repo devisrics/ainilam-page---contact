@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You | Ainilam</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff; /* ✅ changed to white */
+    }
+
+    .container {
+        text-align: center;
+        background: linear-gradient(135deg,#111082, #111082);
+        padding: 50px 30px;
+        border-radius: 16px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        max-width: 500px;
+        width: 90%;
+        color: #fff;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: #00c853;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 40px;
+        animation: pop 0.5s ease;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 20px;
+        color: #e0e0e0;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+        color: #dcdcdc;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 28px;
+        background: #111082;
+        border: 1px solid #fff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #000;
+        transform: translateY(-2px);
+    }
+
+    footer {
+        margin-top: 25px;
+        font-size: 13px;
+        color: #fff;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes pop {
+        from {transform: scale(0.5);}
+        to {transform: scale(1);}
+    }
+
+    @media(max-width: 480px){
+        h1 { font-size: 26px; }
+        .container { padding: 40px 20px; }
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    
+    
+<img src="http://ainilam.com/assets/img/logo/logo.svg" style="background: #fff; padding: 20px; border-radius: 7px;" class="logo" alt="Ainilam">
+    <h1>Thank You!</h1>
+    <h2>Your Request Has Been Received</h2>
+
+    <p>
+        We have successfully received your enquiry. Our team will review your details 
+        and get back to you shortly.
+    </p>
+
+    <p>
+        Ainilam Project Management Consultants deliver structured execution, cost control, 
+        and reliable project delivery for construction and infrastructure projects.
+    </p>
+
+    <a href="index.php" class="btn">Back to Home</a>
+
+    <footer>
+        © 2026 Ainilam • Project Management Consultants
+    </footer>
+
+</div>
+
+</body>
+</html>
