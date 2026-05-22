@@ -93,10 +93,10 @@
                             <strong>What makes Ainilam different from day one:</strong>
                         </p>
                         <p class="typo-text-m">
-                            Ainilam operates as a <strong>pure client-side Project Management Consultancy</strong> (PMC), working exclusively for project owners with <strong>zero contractor conflicts</strong> of interest. Based in Kodambakkam, Chennai, we extend your internal team's capability across residential, commercial, institutional, and infrastructure projects throughout India and international markets.
+                            Ainilam operates as a <strong>pure client-side PMC - </strong>working exclusively for project owners with <strong>zero contractor conflicts.</strong> From Kodambakkam, Chennai, we extend your internal team's capability across residential, commercial, institutional & infrastructure projects throughout India + International markets.
                         </p>
                         <p class="typo-text-m mb-0">
-                            <strong>Backed by Melamaju’s 20+ years</strong> of Asia-Pacific delivery experience, covering urban masterplans serving over 65,000 people, we bring battle-tested systems that eliminate common project pitfalls — scope creep, contractor delays, and cost blowouts.
+                            <strong>Backed by Melamaju’s 20+ years</strong> delivering Asia-Pacific urban masterplans (65,000+ population coverage), we bring battle-tested frameworks that eliminate common Indian project pitfalls - scope creep, contractor delays, cost blowouts.
                         </p>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
         <div class="container">
             <div class="section-top text-center mb-5">
                 <h2 class="sub-title">Proven Delivery Framework</h2>
-                <p class="typo-text-m mt-3">Our <strong>5-phase methodology ensures predictable project outcomes:</strong></p>
+                <p class="typo-text-m mt-3"><strong>Our 5-phase methodology ensures predictable project outcomes:</strong></p>
             </div>
 
             <div class="row g-4 justify-content-center">
@@ -194,34 +194,41 @@
         </div>
     </section>
 
-    <section class="section-padding mv-template-v3">
+    <section class="section-padding mv-template-v4">
         <div class="container">
             
-            <h2 class="mv-main-title text-center mb-5">OUR <span class="accent-black">MISSION</span> & VALUES</h2>
+            <h2 class="mv-main-title text-center mb-5 typo-secondary-color" style="color: #111082;">MISSION & VALUES</h2>
 
-            <div class="mv-content-grid">
+            <div class="mv-infographic-wrapper mt-5">
+                <!-- Gradient Bar Background -->
+                <div class="mv-gradient-bar-container d-none d-md-block">
+                    <div class="mv-gradient-bar"></div>
+                </div>
                 
-                <div class="mv-text-card">
-                    <h4 class="card-subtitle">OUR MISSION</h4>
-                    <p class="typo-text-m">
-                        Deliver predictable project outcomes using international standards, maximizing value through disciplined execution.
-                    </p>
-                    <span class="blue-arrow-link">&gt;&gt;</span>
+                <div class="row text-center position-relative z-1 justify-content-center">
+                    <!-- Mission -->
+                    <div class="col-md-4 mb-5 mb-md-0">
+                        <div class="mv-item">
+                            <div class="mv-circle">
+                                <i class="fa-solid fa-bullseye mv-icon" style="color: #111082;"></i>
+                            </div>
+                            <h3 class="mv-item-title">OUR MISSION</h3>
+                            <p class="mv-item-text">Deliver predictable project outcomes using international standards, maximizing value through disciplined execution.</p>
+                        </div>
+                    </div>
+                    <!-- Values -->
+                    <div class="col-md-6">
+                        <div class="mv-item">
+                            <div class="mv-circle">
+                                <i class="fa-regular fa-gem mv-icon" style="color: #111082;"></i>
+                            </div>
+                            <h3 class="mv-item-title">OUR VALUES</h3>
+                            <p class="mv-item-text">Independence, accountability, transparency, discipline, and excellence guide every Ainilam project - ensuring client-first execution with zero conflicts and complete ownership.</p>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="mv-image-box">
-                    <img src="./assets/img/about/mission-value/mission.png" alt="Ainilam Project Management">
-                </div>
-
-                <div class="mv-text-card">
-                    <h4 class="card-subtitle">OUR VALUES</h4>
-                    <p class="typo-text-m">
-                        Independence, accountability, transparency, discipline, and excellence guide every Ainilam project.
-                    </p>
-                    <span class="blue-arrow-link">&gt;&gt;</span>
-                </div>
-
             </div>
+
         </div>
     </section>
 

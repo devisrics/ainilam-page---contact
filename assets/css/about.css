@@ -148,7 +148,7 @@
 }
 
 .sub-title {
-  color: var(--secondary-color);
+  color: #111082;
   margin-bottom: 20px;
   position: relative;
   text-align: center;
@@ -424,71 +424,83 @@ ul.typo-text-m li::before {
 }
 
 /* ==========================================================================
-   MISSION & VALUES - TEMPLATE V3 (UPDATED CLEAN STYLE)
+   MISSION, VISION & VALUES - TEMPLATE V4 (INFOGRAPHIC STYLE)
    ========================================================================== */
-.mv-template-v3 {
-  background-color: #fcfcfc;
+.mv-template-v4 {
+    background-color: #ffffff;
 }
 
 .mv-main-title {
-  color: var(--secondary-color);
-  font-size: 32px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  margin: 0;
+    color: #111082;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin: 0;
 }
 
-.mv-main-title .accent-black {
-  color: var(--secondary-color);
+.mv-infographic-wrapper {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 
-.mv-content-grid {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+.mv-gradient-bar-container {
+    position: absolute;
+    top: 65px;
+    left: 25%;
+    width: 41.666%;
+    height: 70px;
+    z-index: 0;
 }
 
-.mv-text-card {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  flex: 1;
-  min-height: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.mv-gradient-bar {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    right: -20px;
+    height: 100%;
+    background: #111082;
+    border-radius: 35px;
 }
 
-.card-subtitle {
-  font-size: 16px;
-  font-weight: 700;
-  color: #111082;
-  margin-bottom: 15px;
+.mv-item {
+    position: relative;
+    z-index: 1;
 }
 
-.blue-arrow-link {
-  color: #111082;
-  font-weight: 900;
-  margin-top: 15px;
-  display: inline-block;
-  font-size: 18px;
+.mv-circle {
+    width: 140px;
+    height: 140px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0,0,0,0.03);
 }
 
-.mv-image-box {
-  flex: 1.2;
-  padding: 0 10px;
+.mv-icon {
+    font-size: 55px;
 }
 
-.mv-image-box img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+.mv-item-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #4C4F58;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
+.mv-item-text {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #7B7D84;
+    max-width: 260px;
+    margin: 0 auto;
+}
 /* ==========================================================================
    WHY OWNERS TRUST AINILAM STYLING
    ========================================================================== */
@@ -625,23 +637,6 @@ ul.typo-text-m li::before {
   .method-title {
     font-size: 18px;
   }
-
-  /* Mission and value component shifts */
-  .mv-content-grid {
-    flex-direction: column;
-    text-align: center;
-  }
-  .mv-image-box {
-    order: -1;
-    width: 100%;
-    max-width: 450px;
-    margin-bottom: 30px;
-  }
-  .mv-text-card {
-    width: 100%;
-    min-height: auto;
-  }
-
   /* Trust positioning element metrics */
   .trust-image-wrapper img {
     height: 350px;
@@ -650,6 +645,8 @@ ul.typo-text-m li::before {
     font-size: 28px;
   }
 }
+
+
 
 /* Mobile Devices (max-width: 767px) */
 @media (max-width: 767.98px) {
