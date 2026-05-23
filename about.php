@@ -103,7 +103,7 @@
 
                 <div class="col-lg-6">
                     <div class="positioning-image-wrapper">
-                        <img src="assets/img/about/unique/uniqueimg.svg" alt="Ainilam Client-Side Project Management Oversight" class="img-fluid positioning-img">
+                        <img src="assets/img/about/unique/uniqueposition.png" alt="Ainilam Client-Side Project Management Oversight" class="img-fluid positioning-img">
                     </div>
                 </div>
 
@@ -195,36 +195,36 @@
     </section>
 
     <section class="section-padding mv-template-v4">
-    <div class="container mv-full-screen-wrapper">
-        
-        <h2 class="mv-main-title text-center">MISSION & VALUES</h2>
+        <div class="container mv-full-screen-wrapper">
+            
+            <h2 class="mv-main-title text-center">MISSION & VALUES</h2>
 
-        <div class="mv-grid-container">
-            <div class="row mv-row">
-                <div class="col-md-6 mv-box-image">
-                    <img src="./assets/img/about/mission-value/mission.jpg" alt="Our Mission">
+            <div class="mv-grid-container">
+                <div class="row mv-row">
+                    <div class="col-md-6 mv-box-image">
+                        <img src="./assets/img/about/mission-value/mission.jpg" alt="Our Mission">
+                    </div>
+                    <div class="col-md-6 mv-box-content">
+                        <i class="fa-solid fa-bullseye mv-icon-small"></i>
+                        <h3 class="mv-item-title">OUR MISSION</h3>
+                        <p class="mv-item-text">Deliver predictable project outcomes using international standards, maximizing value through disciplined execution.</p>
+                    </div>
                 </div>
-                <div class="col-md-6 mv-box-content">
-                    <i class="fa-solid fa-bullseye mv-icon-small"></i>
-                    <h3 class="mv-item-title">OUR MISSION</h3>
-                    <p class="mv-item-text">Deliver predictable project outcomes using international standards, maximizing value through disciplined execution.</p>
+
+                <div class="row mv-row flex-md-row-reverse">
+                    <div class="col-md-6 mv-box-image">
+                        <img src="./assets/img/about/mission-value/value.jpg" alt="Our Values">
+                    </div>
+                    <div class="col-md-6 mv-box-content">
+                        <i class="fa-regular fa-gem mv-icon-small"></i>
+                        <h3 class="mv-item-title">OUR VALUES</h3>
+                        <p class="mv-item-text">Independence, accountability, transparency, discipline, and excellence guide every Ainilam project - ensuring client-first execution with zero conflicts and complete ownership.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="row mv-row flex-md-row-reverse">
-                <div class="col-md-6 mv-box-image">
-                    <img src="./assets/img/about/mission-value/value.jpg" alt="Our Values">
-                </div>
-                <div class="col-md-6 mv-box-content">
-                    <i class="fa-regular fa-gem mv-icon-small"></i>
-                    <h3 class="mv-item-title">OUR VALUES</h3>
-                    <p class="mv-item-text">Independence, accountability, transparency, discipline, and excellence guide every Ainilam project - ensuring client-first execution with zero conflicts and complete ownership.</p>
-                </div>
-            </div>
         </div>
-
-    </div>
-</section>
+    </section>
 
     <section class="section-padding wave-trust-section">
         <div class="container text-center">
@@ -302,18 +302,33 @@
         </div>
     </section>
 
-    <section class="section-padding bg-text-primary-color text-white text-center">
-        <div class="container">
-            <h2 class="text-white mb-4">Ready to Protect Your Project?</h2>
-            <p class="typo-text-m text-white mb-4">For <strong>residential towers, commercial complexes, institutional facilities, or infrastructure corridors</strong> — Ainilam delivers what contractors promise.</p>
+    <section class="section-padding bg-text-primary-color text-white position-relative overflow-hidden d-flex align-items-center cta-slider-section"> 
+        <div class="container position-relative container-z">
+            <div class="row align-items-center">
+                
+                <div class="col-lg-7 text-start py-4">
+                    <h1 class="text-white fw-bold mb-3 cta-heading">
+                        Ready to Protect Your Project?
+                    </h1>
+                    
+                    <p class="typo-text-m text-white mb-4 cta-description">
+                        <strong>For residential towers, commercial complexes, institutional facilities, or infrastructure corridors</strong> — Ainilam delivers what contractors promise.
+                    </p>
 
-            <div class="d-flex flex-wrap justify-content-center gap-3">
-                <a href="contact.php" class="custom-btn">
-                    <span class="text-one">GET CONSULTATION</span>
-                </a>
-                <a href="contact.php" class="custom-btn border-1">
-                    <span class="text-one">DISCUSS YOUR PROJECT</span>
-                </a>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="contact.php" class="custom-btn">
+                            <span class="text-one">GET CONSULTATION</span>
+                        </a>
+                        <a href="contact.php" class="custom-btn border-1">
+                            <span class="text-one">DISCUSS YOUR PROJECT</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 d-none d-lg-block position-relative text-end">
+                    <img src="assets/img/about/readyproject/readyforproject.jpg" alt="Ainilam Project Management Team" class="img-fluid cta-side-img">
+                </div>
+
             </div>
         </div>
     </section>
@@ -321,6 +336,16 @@
     <?php include __DIR__ . '/footer.php'; ?>
 
     <script src="assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var bgElements = document.querySelectorAll('[data-bg-src]');
+            bgElements.forEach(function(el) {
+                el.style.backgroundImage = 'url(' + el.getAttribute('data-bg-src') + ')';
+                el.removeAttribute('data-bg-src');
+                el.classList.add('background-image');
+            });
+        });
+    </script>
 </body>
 
 </html>
